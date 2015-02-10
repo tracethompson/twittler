@@ -1,0 +1,55 @@
+body{
+	margin: 0px;
+	overflow: hidden;
+	background-color: white;
+}
+
+h1{
+	margin-top: 50px;
+	font-family: Helvetica;
+	text-align: center;
+	font-size: 50px;
+	color: #00CCFF;
+}
+
+#container{
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	height: 500px;
+	width: 65%;
+	overflow-y: scroll;
+	border: 10px;
+	border-style: solid;
+	border-color: black;
+}
+
+#tweet {
+	padding: 20px;
+	border: 1px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-color: black;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+}
+#tweet a{
+	color: #00CCFF;
+}
+#tweet:hover{
+	background-color: #E0E0E0;
+}
+
+button{
+	margin-left: 47%;
+	font: bold 13px Helvetica, Arial, clean, sans-serif !important;
+	padding: 5px 10px 5px;
+	color: black;
+	cursor: pointer;
+	text-align: center;
+}
+
+.timeago{
+	font-style: italic;
+}
