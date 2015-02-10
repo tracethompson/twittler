@@ -1,13 +1,6 @@
 $(document).ready(function(){
 
 
-  function addLivestamp(){
-    $(".timeago").each(function() {
-    $(this).attr('title', (new Date()).toISOString());
-    $(this).attr('id', "1");
-    $(this).timeago();
-    });
-  };
 
 
   function streamer(){
@@ -20,22 +13,24 @@ $(document).ready(function(){
       var $tweet = $('<div id="tweet"></div>');
       //$tweet.text('@' + tweet.user + ': ' + tweet.message);
       //$tweet.appendTo($body);
-      $body.append("<div id='tweet'>" + '<a href="#" class="tweetname">' + '@' + tweet.user +'</a> <span class="timeago" title="" id="">' + '</span> <div class="message">' + tweet.message +'</div>' + "</div>");
+      $body.append("<div id='tweet'>" + '@' + '<a href="#" class="tweetname">' + tweet.user +'</a> <span class="timeago" title="'+tweet.created_at+'"> </span> <div class="message">' + tweet.message +'</div>' + "</div>");
       index -= 1;
     }
+    $('.timeago').timeago();
   }
   streamer();
-  addLivestamp();
 
   $('button').click( function(){
     streamer();
-    $(".timeago").each(function() {
-      if(($(this).attr('id')) !== "1"){  
-        $(this).attr('title', (new Date()).toISOString());
-        $(this).attr('id', "fuck");
-        $(this).timeago();
-      } else {return;}
-    });
+  });
+
+  $('.tweetname').click( function(){
+    var $profile = $('<div id="profile"></div>')
+    var fuck = $('.tweetname').html();
+    //while(streams.users.fuck)
+    console.log(streams.users[fuck]);
+    $profile.text(streams.users[fuck])
+    $profile.appendTo('body');
   });
 
 });
