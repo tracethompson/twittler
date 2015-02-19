@@ -1,32 +1,41 @@
 body{
 	margin: 0px;
-	overflow: hidden;
 	background-color: white;
+	position: relative;
+	z-index: 0;
 }
 
 h1{
-	margin-top: 50px;
+	margin-top: 30px;
 	font-family: Helvetica;
-	text-align: center;
+	text-align: right;
+	margin-right: 100px;
 	font-size: 50px;
+	font-style: italic;;
 	color: #00CCFF;
 }
 
 #container{
-	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	right: auto;
 	background-color: white;
-	height: 500px;
-	width: 65%;
+	height: 600px;
+	width: 500px;
 	overflow-y: scroll;
-	border: 10px;
+	border: 5px;
 	border-style: solid;
 	border-color: black;
+	margin-top: 20px;
+	z-index: 1;
 }
 
 #tweet {
-	padding: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
 	border: 1px;
 	border-bottom-style: solid;
 	border-left-style: solid;
@@ -34,15 +43,22 @@ h1{
 	border-color: black;
 	font-family: "Helvetica Neue", Helvetica, Arial;
 }
+
 #tweet a{
 	color: #00CCFF;
+	font-size: 15px;
 }
 #tweet:hover{
 	background-color: #E0E0E0;
 }
 
+.message{
+	padding-top: 5px;
+}
+
 button{
-	margin-left: 47%;
+	position: absolute;
+	margin-left: 650px;
 	font: bold 13px Helvetica, Arial, clean, sans-serif !important;
 	padding: 5px 10px 5px;
 	color: black;
@@ -52,4 +68,21 @@ button{
 
 .timeago{
 	font-style: italic;
+	font-size: 12px;
+}
+
+#profile { 
+    position:absolute;
+    height: 550px;  
+    width:500px;  
+    background:#FFFFFF;  
+    right: 100px;
+    top: 100px;
+    z-index:13;
+    overflow-y: scroll;
+	border: 5px;
+	border-style: solid;
+	border-color: black;
+	margin-top: 20px;
+	opacity: 1;
 }
